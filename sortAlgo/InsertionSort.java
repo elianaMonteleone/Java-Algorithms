@@ -20,9 +20,14 @@
             int valueOnTheRight = a[i];
             //this is the value that we have to check if it's bigger than the one on the left
             int valueOnTheLeft = i - 1;
-    
+
+            System.out.println("position in the left before while loop :" +  valueOnTheLeft);
+            System.out.println("value in the left before while loop :" +  a[valueOnTheLeft]);
             while((valueOnTheLeft > -1) && (a[valueOnTheLeft] > valueOnTheRight)){
+                
+                //in the position left + 1 we are going to switch and add the bigger value 4(left) > 2(right) so the left is going to be positionated in left+1 (1 instead of 0) and 0 for the 2 value.
                 a[valueOnTheLeft + 1] = a[valueOnTheLeft];
+                
                 //this is needed to do a step back as position
                 valueOnTheLeft--;
             }
